@@ -4,7 +4,7 @@
 //    $local_office = $_GET['p'];
 //    $year =0;
 //    $local_office = 1;
-    $sql = "select report_id, project_id, local_goverment_id from report WHERE local_goverment_id = 0"; 
+    $sql = "select report_id, project_id, local_goverment_id from report WHERE local_goverment_id = 0";
     //echo $sql;
 
     mysqli_set_charset($conn,"utf8");
@@ -20,13 +20,11 @@
             <th> รหัส อปท. </th>
         </tr>
         ";
-        $sum4dimentionproject = 0;
-        $sum4dimentionbudget = 0;
         //$i=$num;
         while ($row=mysqli_fetch_assoc($result)) {
             echo "<tr><td>" . $row['report_id'] . "</td>";
-            echo "<td>" . $row['project_id'] . "</td>"; 
-            echo "<td>" . $row['local_goverment_id'] . "</td></tr>"; 
+            echo "<td>" . $row['project_id'] . "</td>";
+            echo "<td>" . $row['local_goverment_id'] . "</td></tr>";
         }
         echo "
         </table><br>";

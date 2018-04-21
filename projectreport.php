@@ -173,7 +173,7 @@
         $radio_reason = $row['radio_reason'];
         $txt_reason = $row['txt_reason'];
         $remark_report = $row['remark_report'];
-        $local_goverment_id['local_goverment_id'];
+        // $local_goverment_id['local_goverment_id'];
     }
     if (!isset($budget_true))
         $budget_true = 0;
@@ -191,8 +191,8 @@
         $txt_reason = "";
     if (!isset($remark_report))
         $remark_report = "";
-    if (!isset($local_goverment_id))
-        $local_goverment_id = "";
+    // if (!isset($local_goverment_id))
+    //     $local_goverment_id = "";
 
     $sql = "SELECT * FROM project WHERE project_id ='$_GET[id]'";
     mysqli_set_charset($conn,"utf8");
@@ -341,7 +341,7 @@
 				</button>
 
         <input type='hidden' name = 'id' value='" . $idproject . "'>
-        <input type='hidden' name = 'id' value='" . $local_goverment_id . "'>
+        <input type='hidden' name = 'local_goverment_id' value='" . $local_goverment_id . "'>
         <input type='hidden' name = 'dimention' value='" . $dimention . "'>
         <input type='hidden' name = 'non_budget' value='" . $non_budget . "'>
         <input type='hidden' name = 'r' value='" . $r . "'>

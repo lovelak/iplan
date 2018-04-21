@@ -185,6 +185,7 @@ $result=mysqli_query($conn, $sql);
 $row=mysqli_fetch_assoc($result);
     $nameproject= $row['name'];
     $idproject= $row['project_id'];
+		$local_goverment_id= $row['local_goverment_id'];
     $year1= $row['year1'];
     $year2= $row['year2'];
     $year3= $row['year3'];
@@ -236,20 +237,20 @@ $row=mysqli_fetch_assoc($result);
             <th>รายงานรอบ 12 เดือน</th>";
             if ($year1 == "2561")
                 echo "<tr><td class='center'><label>" . $year1 . "</label></td>
-                <td class='center'><a href='projectreport.php?id=" . $idproject . "&r=1&y=2561&o=$local_goverment_id'><i class='fa fa-pencil-square-o fa-2x'></i></a></td>
-                <td class='center'><a href='projectreport.php?id=" . $idproject . "&r=2&y=2561&o=$local_goverment_id'><i class='fa fa-pencil-square-o fa-2x'></a></td></tr>";
+                <td class='center'><a href='projectreport.php?id=" . $idproject . "&r=1&y=2561&o=" . $local_goverment_id . "'><i class='fa fa-pencil-square-o fa-2x'></i></a></td>
+                <td class='center'><a href='projectreport.php?id=" . $idproject . "&r=2&y=2561&o=" . $local_goverment_id . "'><i class='fa fa-pencil-square-o fa-2x'></a></td></tr>";
             if ($year2 == "2562")
                 echo "</tr><td class='center'><label>" . $year2 . "</label></td>
-                <td class='center'><a href='projectreport.php?id=" . $idproject . "&r=1&y=2562&o=$local_goverment_id'><i class='fa fa-pencil-square-o fa-2x'></a></td>
-                <td class='center'><a href='projectreport.php?id=" . $idproject . "&r=2&y=2562&o=$local_goverment_id'><i class='fa fa-pencil-square-o fa-2x'></a></td></tr>";
+                <td class='center'><a href='projectreport.php?id=" . $idproject . "&r=1&y=2562&o=" . $local_goverment_id . "'><i class='fa fa-pencil-square-o fa-2x'></a></td>
+                <td class='center'><a href='projectreport.php?id=" . $idproject . "&r=2&y=2562&o=" . $local_goverment_id . "'><i class='fa fa-pencil-square-o fa-2x'></a></td></tr>";
             if ($year3 == "2563")
                 echo "<tr><td class='center'><label>" . $year3 . "</label></td>
-                <td class='center'><a href='projectreport.php?id=" . $idproject . "&r=1&y=2563&o=$local_goverment_id'><i class='fa fa-pencil-square-o fa-2x'></a></td>
-                <td class='center'><a href='projectreport.php?id=" . $idproject . "&r=2&y=2563&o=$local_goverment_id'><i class='fa fa-pencil-square-o fa-2x'></a></td></tr>";
+                <td class='center'><a href='projectreport.php?id=" . $idproject . "&r=1&y=2563&o=" . $local_goverment_id . "'><i class='fa fa-pencil-square-o fa-2x'></a></td>
+                <td class='center'><a href='projectreport.php?id=" . $idproject . "&r=2&y=2563&o=" . $local_goverment_id . "'><i class='fa fa-pencil-square-o fa-2x'></a></td></tr>";
             if ($year4 == "2564")
                 echo "<tr><td class='center'><label>" . $year4 . "</label></td>
-                <td class='center'><a href='projectreport.php?id=" . $idproject . "&r=1&y=2564&o=$local_goverment_id'><i class='fa fa-pencil-square-o fa-2x'></a></td>
-                <td class='center'><a href='projectreport.php?id=" . $idproject . "&r=2&y=2564&o=$local_goverment_id'><i class='fa fa-pencil-square-o fa-2x'></a></td></tr>";
+                <td class='center'><a href='projectreport.php?id=" . $idproject . "&r=1&y=2564&o=" . $local_goverment_id . "'><i class='fa fa-pencil-square-o fa-2x'></a></td>
+                <td class='center'><a href='projectreport.php?id=" . $idproject . "&r=2&y=2564&o=" . $local_goverment_id . "'><i class='fa fa-pencil-square-o fa-2x'></a></td></tr>";
 
         } else {
             echo "<th>ดำเนินการปีงบประมาณ</th>";
