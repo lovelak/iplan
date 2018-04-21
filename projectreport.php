@@ -137,7 +137,7 @@
     $r = $_GET['r'];
     $id = $_GET['id'];
     $y = $_GET['y'];
-    $o = $_GET['o'];
+    //$o = $_GET['o'];
     if ($r == "1") {
         $round_report = '6';
     } else {
@@ -255,8 +255,9 @@
         if ($non_budget == 'N'){
             echo "<label class='text-h'>งบประมาณ (วงเงินตามแผนพัฒนาท้องถิ่น) ประจำปีงบประมาณ พ.ศ. " . $y . "</label><br>
             <input type='radio' name='budget' value='N' onclick='disBudgetBox()' required checked disabled> ดำเนินการโดยไม่ใช้งบประมาณ <br><br>
-            <input type='hidden' name = 'txtBudget' value='0'>
-            <input type='hidden' name = 'id' value='" . $local_goverment_id . "'>
+						<input type='hidden' name = 'id' value='" . $idproject . "'>
+						<input type='hidden' name = 'txtBudget' value='0'>
+            <input type='hidden' name = 'local_goverment_id' value='" . $local_goverment_id . "'>
             <input type='hidden' name = 'txtAmount' value='0'>
             <input type='hidden' name = 'txtPaid' value='0'>
             <input type='hidden' name = 'use_budget' value='N'>";

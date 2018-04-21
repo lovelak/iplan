@@ -32,7 +32,7 @@ $q = $_GET['q'];
     } else if ($q == "2564") {
         $sql="SELECT * FROM project WHERE status_use = 'Y' AND year4='2564'".$locals."order by project_id desc";
     }
-		
+
     include '../include/ConnectionDb.php';
     mysqli_set_charset($conn,"utf8");
     $result=mysqli_query($conn, $sql);
@@ -125,8 +125,8 @@ $q = $_GET['q'];
         if ($row['status_pass'] == 'N'){
             echo "</td><td class='center'>";
         } else {
-            echo "<a href='projectreport.php?id=$row[project_id]&r=1&y=$q&o=$row[local_goverment_id]'> <img src='images/icon/report.png'></a></td>
-            <td class='center'><a href='projectreport.php?id=$row[project_id]&r=2&y=$q&o=$row[local_goverment_id]'> <img src='images/icon/report.png'></a>";
+            echo "<a href='projectreport.php?id=$row[project_id]&r=1&y=$q'> <img src='images/icon/report.png'></a></td>
+            <td class='center'><a href='projectreport.php?id=$row[project_id]&r=2&y=$q'> <img src='images/icon/report.png'></a>";
         }
 
     } else {
